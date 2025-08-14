@@ -1,0 +1,23 @@
+/* ElevaSonic-specific Styles */
+.sonic-header {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    border-bottom: 2px solid var(--accent-color);
+}
+
+.sonic-nav-link {
+    color: var(--accent-color);
+}
+
+.services-list {
+    list-style: none;
+    display: grid;
+    gap: 2rem;
+}
+
+.service-item {
+    background-color: #111;
+    border: 1px solid var(--accent-color);
+    border-radius: 10px;
+    padding: 2rem;
+}

@@ -1,0 +1,140 @@
+/* File: assets/css/eleva-production.css */
+/* New stylesheet for the Eleva Production page with a fresh design. */
+
+/* --- Hero Section --- */
+#production-hero {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../images/production-hero-2.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 80vh;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+#production-hero h1 {
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    font-weight: 700;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+}
+
+#production-hero p {
+    font-size: clamp(1rem, 2.5vw, 1.5rem);
+    margin-bottom: 3rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: 300;
+}
+
+/* --- Services Section --- */
+#services .section-description {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 4rem;
+    color: #555;
+    font-size: 1.1rem;
+}
+
+#services .service-card {
+    background: #f8f9fa;
+    padding: 40px 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-bottom: 4px solid #ff4500;
+}
+
+#services .service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+#services .service-card i {
+    font-size: 3.5rem;
+    color: #ff4500;
+    margin-bottom: 1.5rem;
+    transition: transform 0.3s ease;
+}
+
+#services .service-card:hover i {
+    transform: scale(1.1);
+}
+
+/* --- Portfolio Section --- */
+#portfolio {
+    background-color: #1a1a1a;
+    color: #ffffff;
+}
+
+#portfolio h2 {
+    color: #ffffff;
+    text-align: center;
+    margin-bottom: 3rem;
+    font-size: 2.5rem;
+    font-weight: 600;
+}
+
+#portfolio .portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.portfolio-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.portfolio-item:hover {
+    transform: scale(1.05);
+}
+
+.portfolio-thumbnail {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    display: block;
+}
+
+.portfolio-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.portfolio-item:hover .portfolio-overlay {
+    opacity: 1;
+}
+
+.portfolio-overlay h4 {
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+}
+
+/* --- Responsive adjustments --- */
+@media (max-width: 768px) {
+    #production-hero {
+        height: 60vh;
+    }
+    .portfolio-overlay h4 {
+        font-size: 1.2rem;
+    }
+}
